@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #3c3c3c;
+
+  /* Dazco brand palette (see /ref/MANUAL_DE_MARCA_DAZCO_LLC.pdf) */
+  --color-dazco-tangelo: #ea6e24;
+  --color-dazco-cerulean: #01aeea;
+  --color-dazco-blue: #137abf;
+  --color-dazco-rich-grey: #3c3c3c;
+  --color-dazco-dravit-grey: #5b5b5b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--color-dazco-tangelo);
+  --color-secondary: var(--color-dazco-blue);
+  --color-accent: var(--color-dazco-cerulean);
+  --color-neutral: var(--color-dazco-rich-grey);
+  --color-neutral-soft: var(--color-dazco-dravit-grey);
+
+  --font-sans: var(--font-jost);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
