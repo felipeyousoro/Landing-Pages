@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "GAIA UEL Agro",
   description:
-    "GAIA UEL Agro - agricultura de precisão com Inteligência Artificial e drones para detecção precoce de doenças em plantas, ligado à Universidade Estadual de Londrina.",
+    "Grupo de pesquisa e extensão da UEL. Tecnologia da informação e inteligência artificial aplicadas à agricultura de precisão e à detecção precoce de doenças em plantas.",
   icons: {
     icon: "/brand/gaia-logo-dark.png",
   },

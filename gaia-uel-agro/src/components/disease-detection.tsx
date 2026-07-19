@@ -48,17 +48,17 @@ const ROADMAP = [
   {
     title: "Construção de aplicativo",
     explanation:
-      "Permitir com que o usuário possa em tempo real identificar em sua lavoura quais doenças estão afetando suas plantas a partir da sua câmera do celular",
+      "Permitir que o usuário identifique em tempo real, pela câmera do celular, quais doenças estão afetando as plantas da sua lavoura.",
   },
   {
     title: "Mapeamento com drones",
     explanation:
-      "Realizar a detecção de maneira massificada a partir de imagens aéreas capturadas por drones, identificando simultaneamente áreas de foco de doenças",
+      "Realizar a detecção em larga escala a partir de imagens aéreas capturadas por drones, identificando simultaneamente as áreas de foco das doenças.",
   },
   {
     title: "Aplicação com sensores multiespectrais",
     explanation:
-      "Realizar a detecção de maneira precoce e avaliar estresse hídrico e a deficiência nutricional",
+      "Realizar a detecção de forma precoce e avaliar o estresse hídrico e a deficiência nutricional.",
   },
 ];
 
@@ -287,7 +287,7 @@ export function DiseaseDetection() {
           </h2>
           <p className="mx-auto max-w-2xl text-neutral-soft">
             Nossos modelos classificam imagens de folhas e mostram, por meio
-            de mapas de calor, quais regiões pesaram na decisão, a mesma
+            de mapas de calor, quais regiões pesaram na decisão — a mesma
             lógica usada para identificar precocemente pragas e doenças em
             imagens capturadas por drones.
           </p>

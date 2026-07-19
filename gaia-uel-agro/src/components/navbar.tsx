@@ -10,11 +10,7 @@ const NAV_LINKS = [
   { href: "#drones", label: "Drones" },
 ];
 
-type NavbarProps = {
-  mailEnabled: boolean;
-};
-
-export function Navbar({ mailEnabled }: NavbarProps) {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,10 +23,10 @@ export function Navbar({ mailEnabled }: NavbarProps) {
         >
           <Image
             src="/brand/gaia-logo-dark.png"
-            alt="GAIA — Soluções em TIC"
-            width={40}
-            height={70}
-            className="h-11 w-auto"
+            alt="GAIA"
+            width={36}
+            height={43}
+            className="h-10 w-auto"
             priority
           />
           <span className="flex flex-col leading-tight">
@@ -53,14 +49,6 @@ export function Navbar({ mailEnabled }: NavbarProps) {
               {link.label}
             </a>
           ))}
-          {mailEnabled && (
-            <a
-              href="#contato"
-              className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-secondary"
-            >
-              Fale com a gente
-            </a>
-          )}
         </div>
 
         <button
@@ -101,15 +89,6 @@ export function Navbar({ mailEnabled }: NavbarProps) {
                 {link.label}
               </a>
             ))}
-            {mailEnabled && (
-              <a
-                href="#contato"
-                onClick={() => setIsOpen(false)}
-                className="rounded-full bg-primary px-5 py-2 text-center text-sm font-semibold text-white"
-              >
-                Fale com a gente
-              </a>
-            )}
           </div>
         </div>
       )}

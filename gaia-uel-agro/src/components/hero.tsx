@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-type HeroProps = {
-  mailEnabled: boolean;
-};
-
-export function Hero({ mailEnabled }: HeroProps) {
+export function Hero() {
   return (
     <section
       id="top"
@@ -15,36 +11,23 @@ export function Hero({ mailEnabled }: HeroProps) {
           <Image
             src="/brand/gaia-logo-dark.png"
             alt="GAIA"
-            width={14}
-            height={24}
-            className="h-5 w-auto"
+            width={16}
+            height={16}
+            className="h-4 w-auto"
           />
           GAIA &middot; Universidade Estadual de Londrina
         </span>
         <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-neutral sm:text-5xl lg:text-6xl">
-          Inteligência Artificial e drones a serviço da lavoura.
+          Agricultura de precisão a serviço do produtor.
         </h1>
         <p className="max-w-xl text-lg leading-8 text-neutral-soft">
-          O GAIA une pesquisa da UEL, visão computacional e imagens aéreas para
-          detectar doenças em plantas antes que se tornem prejuízo, ajudando
-          produtores a agir na hora certa e com mais precisão.
+          Usamos inteligência artificial para que o produtor obtenha diagnósticos
+          em tempo real da sua lavoura, na palma da mão.
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
-          {mailEnabled && (
-            <a
-              href="#contato"
-              className="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-colors hover:bg-secondary"
-            >
-              Fale com a gente
-            </a>
-          )}
           <a
             href="#deteccao-de-doencas"
-            className={
-              mailEnabled
-                ? "rounded-full border border-neutral/15 px-6 py-3 text-center text-sm font-semibold text-neutral transition-colors hover:border-primary hover:text-primary"
-                : "rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-colors hover:bg-secondary"
-            }
+            className="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-colors hover:bg-secondary"
           >
             Ver a tecnologia em ação
           </a>

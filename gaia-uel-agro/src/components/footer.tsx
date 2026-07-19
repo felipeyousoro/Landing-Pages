@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-type FooterProps = {
-  mailEnabled: boolean;
-};
-
-export function Footer({ mailEnabled }: FooterProps) {
+export function Footer() {
   return (
     <footer className="bg-secondary text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
@@ -12,29 +8,23 @@ export function Footer({ mailEnabled }: FooterProps) {
           <div className="flex items-center gap-3">
             <Image
               src="/brand/gaia-logo.png"
-              alt="GAIA — Soluções em TIC"
-              width={40}
-              height={70}
-              className="h-12 w-auto"
+              alt="GAIA"
+              width={36}
+              height={43}
+              className="h-10 w-auto"
             />
             <span className="text-lg font-extrabold tracking-tight text-white">
               GAIA
             </span>
           </div>
           <p className="max-w-xs text-sm text-white/70">
-            Agricultura de precisão com Inteligência Artificial e drones,
-            ligado à Universidade Estadual de Londrina (UEL).
+            Grupo de pesquisa e extensão da Universidade Estadual de Londrina.
+            Tecnologia da informação e inteligência artificial aplicadas à
+            agricultura de precisão.
           </p>
-        </div>
-
-        <div className="flex flex-col gap-2 text-sm text-white/70">
-          <span className="font-semibold text-white">Contato</span>
-          {mailEnabled && (
-            <a href="mailto:contato@gaia-uel.com.br" className="transition-colors hover:text-accent">
-              contato@gaia-uel.com.br
-            </a>
-          )}
-          <span>Campus Universitário, Londrina - PR</span>
+          <span className="text-sm text-white/70">
+            Campus Universitário, Londrina — PR
+          </span>
         </div>
 
         <nav className="flex flex-col gap-2 text-sm text-white/70">
@@ -48,11 +38,6 @@ export function Footer({ mailEnabled }: FooterProps) {
           <a href="#drones" className="transition-colors hover:text-accent">
             Drones
           </a>
-          {mailEnabled && (
-            <a href="#contato" className="transition-colors hover:text-accent">
-              Contato
-            </a>
-          )}
         </nav>
       </div>
     </footer>
