@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Contact } from "@/components/contact";
@@ -42,68 +43,77 @@ export default async function ServicePage({ params }: ServicePageProps) {
     <div className="flex flex-1 flex-col">
       <Navbar />
       <main className="flex flex-1 flex-col">
-        <section className="bg-gradient-to-br from-white via-white to-accent/10">
-          <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 lg:px-8 lg:py-24">
-            <div className="flex flex-col gap-3">
-              <nav aria-label="Breadcrumb" className="text-sm text-neutral-soft">
-                <ol className="flex flex-wrap items-center gap-2">
-                  <li>
-                    <Link
-                      href="/"
-                      className="transition-colors hover:text-primary"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li aria-hidden="true">/</li>
-                  <li>
-                    <Link
-                      href="/#services"
-                      className="transition-colors hover:text-primary"
-                    >
-                      Services
-                    </Link>
-                  </li>
-                  <li aria-hidden="true">/</li>
-                  <li className="font-medium text-neutral">{service.title}</li>
-                </ol>
-              </nav>
-              <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-neutral sm:text-4xl lg:text-5xl">
-                {service.title}
-              </h1>
-            </div>
-
-            <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
-              <div
-                className="flex aspect-[4/3] w-full items-center justify-center bg-neutral/10"
-                aria-label="Sample image placeholder"
+        <section className="relative flex min-h-[70vh] items-center overflow-hidden">
+          <Image
+            src={service.image}
+            alt={service.imageAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-neutral/85 via-neutral/65 to-neutral/25"
+            aria-hidden
+          />
+          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-24 lg:px-8 lg:py-32">
+            <nav aria-label="Breadcrumb" className="text-sm text-white/70">
+              <ol className="flex flex-wrap items-center gap-2">
+                <li>
+                  <Link href="/" className="transition-colors hover:text-white">
+                    Home
+                  </Link>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li>
+                  <Link
+                    href="/#services"
+                    className="transition-colors hover:text-white"
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li className="font-medium text-white">{service.title}</li>
+              </ol>
+            </nav>
+            <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              {service.title}
+            </h1>
+            <p className="max-w-xl text-lg leading-8 text-white/85">
+              {service.description}
+            </p>
+            <div>
+              <a
+                href="#contact"
+                className="inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-colors hover:bg-secondary"
               >
-                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-soft">
-                  SAMPLE
-                </span>
-              </div>
+                Contact us
+              </a>
+            </div>
+          </div>
+        </section>
 
-              <div className="flex flex-col gap-5">
-                <p className="text-lg leading-8 text-neutral-soft">
-                  {service.description}
+        <section className="bg-white">
+          <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 py-16 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-24">
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src={service.image}
+                alt={service.imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
+            <div className="flex flex-col gap-5">
+              {service.body.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-base leading-7 text-neutral-soft"
+                >
+                  {paragraph}
                 </p>
-                {service.body.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-base leading-7 text-neutral-soft"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-                <div className="pt-2">
-                  <a
-                    href="#contact"
-                    className="inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary"
-                  >
-                    Contact us
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

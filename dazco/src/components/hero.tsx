@@ -1,17 +1,31 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-br from-white via-white to-accent/10"
+      className="relative flex min-h-[85vh] items-center overflow-hidden"
     >
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-24 lg:px-8 lg:py-32">
-        <span className="rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
+      <Image
+        src="/images/dubai-skyline.jpg"
+        alt="Dubai skyline"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-neutral/85 via-neutral/65 to-neutral/25"
+        aria-hidden
+      />
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-6 py-24 lg:px-8 lg:py-32">
+        <span className="rounded-full bg-white/15 px-4 py-1 text-sm font-semibold text-white backdrop-blur-sm">
           A place of Trust
         </span>
-        <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-neutral sm:text-5xl lg:text-6xl">
+        <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
           Facilities management you can rely on.
         </h1>
-        <p className="max-w-xl text-lg leading-8 text-neutral-soft">
+        <p className="max-w-xl text-lg leading-8 text-white/85">
           Locally based with international reach. Since 2001, Dazco has delivered
           properties, facilities, warehousing, and maintenance services across the UAE.
         </p>
@@ -24,7 +38,7 @@ export function Hero() {
           </a>
           <a
             href="/#services"
-            className="rounded-full border border-neutral/15 px-6 py-3 text-center text-sm font-semibold text-neutral transition-colors hover:border-primary hover:text-primary"
+            className="rounded-full border border-white/40 px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
           >
             See our services
           </a>

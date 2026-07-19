@@ -19,7 +19,7 @@ export function Services() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="group flex flex-col gap-3 rounded-2xl border border-neutral/10 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              className="group flex cursor-pointer flex-col gap-3 rounded-2xl border border-neutral/10 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
             >
               <span className="h-1.5 w-10 rounded-full bg-primary transition-colors group-hover:bg-secondary" />
               <h3 className="text-lg font-semibold text-neutral group-hover:text-primary">

@@ -45,7 +45,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur-sm">
       <div className="bg-secondary text-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-1.5 text-xs sm:text-sm lg:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2.5 text-xs sm:text-sm lg:px-8">
           <a
             href="tel:+97137353369"
             className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
@@ -119,7 +119,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           <Link
-            href="/#about"
+            href="/about"
             className="text-sm font-medium text-neutral transition-colors hover:text-primary"
           >
             About
@@ -131,7 +131,7 @@ export function Navbar() {
               aria-expanded={servicesOpen}
               aria-haspopup="true"
               onClick={() => setServicesOpen((open) => !open)}
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral transition-colors hover:text-primary"
+              className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-neutral transition-colors hover:text-primary"
             >
               Services
               <svg
@@ -154,7 +154,7 @@ export function Navbar() {
                 <Link
                   href="/#services"
                   onClick={closeMenus}
-                  className="block rounded-lg px-3 py-2 text-sm font-semibold text-primary transition-colors hover:bg-neutral/[0.04]"
+                  className="block cursor-pointer rounded-lg px-3 py-2 text-sm font-semibold text-primary transition-colors hover:bg-neutral/[0.04]"
                 >
                   All services
                 </Link>
@@ -164,7 +164,7 @@ export function Navbar() {
                     key={service.slug}
                     href={`/services/${service.slug}`}
                     onClick={closeMenus}
-                    className="block rounded-lg px-3 py-2 text-sm text-neutral transition-colors hover:bg-neutral/[0.04] hover:text-primary"
+                    className="block cursor-pointer rounded-lg px-3 py-2 text-sm text-neutral transition-colors hover:bg-neutral/[0.04] hover:text-primary"
                   >
                     {service.title}
                   </Link>
@@ -225,7 +225,7 @@ export function Navbar() {
         <div className="border-t border-black/5 bg-white px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             <Link
-              href="/#about"
+              href="/about"
               onClick={closeMenus}
               className="text-sm font-medium text-neutral transition-colors hover:text-primary"
             >
@@ -237,7 +237,7 @@ export function Navbar() {
                 type="button"
                 aria-expanded={mobileServicesOpen}
                 onClick={() => setMobileServicesOpen((open) => !open)}
-                className="inline-flex items-center justify-between text-sm font-medium text-neutral transition-colors hover:text-primary"
+                className="inline-flex cursor-pointer items-center justify-between text-sm font-medium text-neutral transition-colors hover:text-primary"
               >
                 Services
                 <svg
@@ -260,7 +260,7 @@ export function Navbar() {
                   <Link
                     href="/#services"
                     onClick={closeMenus}
-                    className="text-sm font-semibold text-primary"
+                    className="cursor-pointer text-sm font-semibold text-primary"
                   >
                     All services
                   </Link>
@@ -269,7 +269,7 @@ export function Navbar() {
                       key={service.slug}
                       href={`/services/${service.slug}`}
                       onClick={closeMenus}
-                      className="text-sm text-neutral-soft transition-colors hover:text-primary"
+                      className="cursor-pointer text-sm text-neutral-soft transition-colors hover:text-primary"
                     >
                       {service.title}
                     </Link>

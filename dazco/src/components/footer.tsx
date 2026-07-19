@@ -45,7 +45,7 @@ export function Footer() {
 
         <nav className="flex flex-col gap-2 text-sm text-white/70">
           <span className="font-semibold text-white">Navigate</span>
-          <Link href="/#about" className="transition-colors hover:text-primary">
+          <Link href="/about" className="transition-colors hover:text-primary">
             About
           </Link>
           <Link
