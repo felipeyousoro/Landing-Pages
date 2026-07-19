@@ -28,15 +28,18 @@ Copy the environment file and fill in your SMTP credentials:
 cp .env.example .env.local
 ```
 
-| Variable             | Description                                                        |
-| --------------------- | -------------------------------------------------------------------- |
-| `SMTP_HOST`           | SMTP server host (e.g. from Gmail, Office365, or your own provider) |
-| `SMTP_PORT`           | SMTP port (`587` for TLS, `465` for SSL)                             |
-| `SMTP_SECURE`         | `true` to force SSL, otherwise leave `false`                        |
-| `SMTP_USER`           | SMTP account username                                                |
-| `SMTP_PASS`           | SMTP account password / app password                                 |
-| `CONTACT_TO_EMAIL`    | Inbox that should receive contact form submissions                   |
-| `CONTACT_FROM_EMAIL`  | "From" address used for outgoing emails (defaults to `SMTP_USER`)    |
+| Variable                        | Description                                                                 |
+| -------------------------------- | --------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`           | Canonical site URL for OG tags, sitemap, robots, and JSON-LD                |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID`  | Optional GA4 ID; enables analytics + cookie consent when set                |
+| `NEXT_PUBLIC_CONTACT_EMAIL`      | Optional public email exposed in LocalBusiness structured data              |
+| `SMTP_HOST`                      | SMTP server host (e.g. from Gmail, Office365, or your own provider)         |
+| `SMTP_PORT`                      | SMTP port (`587` for TLS, `465` for SSL)                                    |
+| `SMTP_SECURE`                    | `true` to force SSL, otherwise leave `false`                                |
+| `SMTP_USER`                      | SMTP account username                                                       |
+| `SMTP_PASS`                      | SMTP account password / app password                                        |
+| `CONTACT_TO_EMAIL`               | Inbox that should receive contact form submissions                          |
+| `CONTACT_FROM_EMAIL`             | "From" address used for outgoing emails (defaults to `SMTP_USER`)           |
 
 > **Gmail users:** you'll need to create an [App Password](https://myaccount.google.com/apppasswords)
 > (requires 2-Step Verification) instead of your regular password.
@@ -55,17 +58,21 @@ Open [http://localhost:3000](http://localhost:3000).
 src/
   app/
     api/contact/route.ts   # POST endpoint that validates + sends the contact email
-    layout.tsx              # Root layout, fonts, metadata
+    layout.tsx              # Root layout, fonts, metadata, JSON-LD
     page.tsx                # Landing page composition
+    sitemap.ts              # Generated /sitemap.xml
+    robots.ts               # Generated /robots.txt
   components/
     navbar.tsx, hero.tsx, about.tsx, services.tsx, contact.tsx,
-    contact-form.tsx, footer.tsx
+    contact-form.tsx, footer.tsx, analytics.tsx, skip-to-content.tsx
   lib/
+    site.ts                 # Shared site URL, address, social links
+    json-ld.ts              # LocalBusiness + Service structured data
     contact-schema.ts       # Shared Zod schema (client + server validation)
-    mailer.ts                # Nodemailer transporter + email template
+    mailer.ts               # Nodemailer transporter + email template
 public/
-  brand/                     # Logo variations copied from ref/
-ref/                         # Original brand manual + source logo files
+  brand/                    # Logo variations copied from ref/
+ref/                        # Original brand manual + source logo files
 ```
 
 ## Brand

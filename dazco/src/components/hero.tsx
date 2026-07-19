@@ -14,12 +14,9 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-neutral/85 via-neutral/65 to-neutral/25"
-        aria-hidden
-      />
+      <div className="absolute inset-0 bg-neutral/80" aria-hidden />
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-6 py-24 lg:px-8 lg:py-32">
-        <span className="rounded-full bg-white/15 px-4 py-1 text-sm font-semibold text-white backdrop-blur-sm">
+        <span className="rounded-full bg-primary px-4 py-1 text-sm font-semibold text-white">
           A place of Trust
         </span>
         <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">

@@ -1,1 +1,7 @@
 /.idea/
+
+# Next.js / build artifacts (all packages in this monorepo)
+**/.next/
+**/out/
+**/build/
+**/*.tsbuildinfo

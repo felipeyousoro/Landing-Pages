@@ -54,6 +54,9 @@ export function Footer() {
           >
             Services
           </Link>
+          <Link href="/#faq" className="transition-colors hover:text-primary">
+            FAQ
+          </Link>
           <Link
             href="/#contact"
             className="transition-colors hover:text-primary"

@@ -4,7 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { JsonLd } from "@/components/json-ld";
 import { Navbar } from "@/components/navbar";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { getServiceBySlug, SERVICES } from "@/lib/services";
 
 type ServicePageProps = {
@@ -22,12 +24,36 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
 
   if (!service) {
-    return { title: "Service | Dazco LLC" };
+    return { title: "Service" };
   }
 
+  const path = `/services/${service.slug}`;
+
   return {
-    title: `${service.title} | Dazco LLC`,
+    title: service.title,
     description: service.description,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title: `${service.title} | Dazco LLC`,
+      description: service.description,
+      url: path,
+      images: [
+        {
+          url: service.image,
+          width: 1200,
+          height: 630,
+          alt: service.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | Dazco LLC`,
+      description: service.description,
+      images: [service.image],
+    },
   };
 }
 
@@ -41,8 +67,18 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <div className="flex flex-1 flex-col">
+      <JsonLd
+        data={[
+          serviceJsonLd(service),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/#services" },
+            { name: service.title, path: `/services/${service.slug}` },
+          ]),
+        ]}
+      />
       <Navbar />
-      <main className="flex flex-1 flex-col">
+      <main id="main-content" className="flex flex-1 flex-col">
         <section className="relative flex min-h-[70vh] items-center overflow-hidden">
           <Image
             src={service.image}
@@ -53,7 +89,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             className="object-cover object-center"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-neutral/85 via-neutral/65 to-neutral/25"
+            className="absolute inset-0 bg-neutral/80"
             aria-hidden
           />
           <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-24 lg:px-8 lg:py-32">

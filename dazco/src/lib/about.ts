@@ -1,15 +1,19 @@
 export const ABOUT_STATS = [
   {
-    value: "24",
-    label: "Hour Service",
+    value: "20+",
+    label: "Years in Operation",
   },
   {
     value: "120+",
-    label: "Customers",
+    label: "Clients Served",
   },
   {
-    value: "Dedicated",
-    label: "Teams",
+    value: "500+",
+    label: "Sites Maintained",
+  },
+  {
+    value: "24/7",
+    label: "Support & Response",
   },
 ] as const;
 

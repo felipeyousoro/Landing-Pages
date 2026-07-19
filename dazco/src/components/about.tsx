@@ -6,7 +6,7 @@ export function About() {
     <section id="about" className="bg-white">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
         <div className="flex flex-col gap-4">
-          <span className="text-sm font-semibold uppercase tracking-wide text-primary">
+          <span className="text-sm font-semibold uppercase tracking-wide text-secondary">
             About Dazco
           </span>
           <h2 className="text-3xl font-semibold tracking-tight text-neutral sm:text-4xl">
@@ -15,13 +15,13 @@ export function About() {
           <div className="pt-2">
             <Link
               href="/about"
-              className="inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary"
+              className="inline-flex rounded-full bg-secondary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary"
             >
               About Us
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-4 text-neutral-soft">
+        <div className="flex flex-col gap-4 border-l-4 border-primary pl-6 text-neutral-soft">
           <p>
             Dazco LLC is a facilities company based in Al Ain, Abu Dhabi — locally
             rooted with international reach. We operate across properties and
@@ -40,24 +40,47 @@ export function About() {
   );
 }
 
+const STAT_TILE_COLORS = [
+  "bg-primary text-white",
+  "bg-white text-secondary",
+  "bg-accent text-white",
+  "bg-white text-primary",
+] as const;
+
 export function AboutStats() {
   return (
-    <div className="grid gap-4 sm:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {ABOUT_STATS.map((stat, index) => (
         <div
           key={stat.label}
-          className={`flex flex-col items-center justify-center gap-1 px-6 py-8 text-center text-white ${
-            index % 2 === 0 ? "bg-primary" : "bg-secondary"
-          }`}
+          className={`flex flex-col items-center justify-center gap-1 px-6 py-8 text-center ${STAT_TILE_COLORS[index % STAT_TILE_COLORS.length]}`}
         >
-          <span className="text-3xl font-semibold tracking-tight sm:text-4xl">
+          <span className="text-4xl font-semibold tracking-tight sm:text-5xl">
             {stat.value}
           </span>
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/85">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] opacity-85">
             {stat.label}
           </span>
         </div>
       ))}
     </div>
+  );
+}
+
+export function StatsSection() {
+  return (
+    <section className="bg-secondary">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 lg:px-8 lg:py-28">
+        <div className="flex flex-col gap-3 text-center">
+          <span className="text-sm font-semibold uppercase tracking-wide text-white">
+            By the numbers
+          </span>
+          <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Two decades of trusted delivery across the UAE.
+          </h2>
+        </div>
+        <AboutStats />
+      </div>
+    </section>
   );
 }

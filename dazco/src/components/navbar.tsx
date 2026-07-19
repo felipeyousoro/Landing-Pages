@@ -174,6 +174,13 @@ export function Navbar() {
           </div>
 
           <Link
+            href="/#faq"
+            className="text-sm font-medium text-neutral transition-colors hover:text-primary"
+          >
+            FAQ
+          </Link>
+
+          <Link
             href="/#contact"
             className="text-sm font-medium text-neutral transition-colors hover:text-primary"
           >
@@ -278,6 +285,13 @@ export function Navbar() {
               )}
             </div>
 
+            <Link
+              href="/#faq"
+              onClick={closeMenus}
+              className="text-sm font-medium text-neutral transition-colors hover:text-primary"
+            >
+              FAQ
+            </Link>
             <Link
               href="/#contact"
               onClick={closeMenus}

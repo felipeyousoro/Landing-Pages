@@ -3,21 +3,54 @@ import Link from "next/link";
 import { AboutStats } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { JsonLd } from "@/components/json-ld";
 import { Navbar } from "@/components/navbar";
 import { ABOUT_PAGE } from "@/lib/about";
+import { breadcrumbJsonLd } from "@/lib/json-ld";
+import { SITE } from "@/lib/site";
+
+const aboutDescription =
+  "Learn about Dazco LLC — facilities, properties, and operational services in Al Ain since 2001.";
 
 export const metadata: Metadata = {
-  title: "About Us | Dazco LLC",
-  description:
-    "Learn about Dazco LLC — facilities, properties, and operational services in Al Ain since 2001.",
+  title: "About Us",
+  description: aboutDescription,
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | Dazco LLC",
+    description: aboutDescription,
+    url: "/about",
+    images: [
+      {
+        url: SITE.defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: SITE.defaultOgImageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Dazco LLC",
+    description: aboutDescription,
+    images: [SITE.defaultOgImage],
+  },
 };
 
 export default function AboutPage() {
   return (
     <div className="flex flex-1 flex-col">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: ABOUT_PAGE.title, path: "/about" },
+        ])}
+      />
       <Navbar />
-      <main className="flex flex-1 flex-col">
-        <section className="bg-gradient-to-br from-white via-white to-accent/10">
+      <main id="main-content" className="flex flex-1 flex-col">
+        <section className="bg-white">
           <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 lg:px-8 lg:py-24">
             <div className="flex flex-col gap-3">
               <nav aria-label="Breadcrumb" className="text-sm text-neutral-soft">
