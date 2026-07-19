@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2a24;
+
+  /* GAIA / UEL palette. Primary green matches UEL's official brand green
+     (Manual de Identidade Visual da UEL: Pantone equivalente, #00753B). */
+  --color-gaia-uel-green: #00753b;
+  --color-gaia-forest: #0b3d24;
+  --color-gaia-tech-teal: #0ea5a0;
+  --color-gaia-sky: #2f8f6f;
+  --color-gaia-soil: #6b5c4a;
+  --color-gaia-ink: #1f2a24;
+  --color-gaia-ink-soft: #4b5a52;
+  --color-gaia-mist: #f3f7f4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--color-gaia-uel-green);
+  --color-secondary: var(--color-gaia-forest);
+  --color-accent: var(--color-gaia-tech-teal);
+  --color-neutral: var(--color-gaia-ink);
+  --color-neutral-soft: var(--color-gaia-ink-soft);
+  --color-mist: var(--color-gaia-mist);
+
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
