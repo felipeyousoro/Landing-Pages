@@ -11,11 +11,11 @@ export function Footer({ mailEnabled }: FooterProps) {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <Image
-              src="/brand/uel-logo-white.png"
-              alt="Universidade Estadual de Londrina (UEL)"
+              src="/brand/gaia-logo.png"
+              alt="GAIA — Soluções em TIC"
               width={40}
-              height={40}
-              className="h-9 w-9"
+              height={70}
+              className="h-12 w-auto"
             />
             <span className="text-lg font-extrabold tracking-tight text-white">
               GAIA

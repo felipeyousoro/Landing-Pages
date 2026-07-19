@@ -26,11 +26,11 @@ export function Navbar({ mailEnabled }: NavbarProps) {
           onClick={() => setIsOpen(false)}
         >
           <Image
-            src="/brand/uel-logo-green.png"
-            alt="Universidade Estadual de Londrina (UEL)"
-            width={48}
-            height={48}
-            className="h-10 w-10"
+            src="/brand/gaia-logo-dark.png"
+            alt="GAIA — Soluções em TIC"
+            width={40}
+            height={70}
+            className="h-11 w-auto"
             priority
           />
           <span className="flex flex-col leading-tight">

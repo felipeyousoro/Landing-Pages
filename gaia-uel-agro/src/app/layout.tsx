@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "GAIA UEL Agro - agricultura de precisão com Inteligência Artificial e drones para detecção precoce de doenças em plantas, ligado à Universidade Estadual de Londrina.",
   icons: {
-    icon: "/brand/uel-logo-green.png",
+    icon: "/brand/gaia-logo-dark.png",
   },
 };
 

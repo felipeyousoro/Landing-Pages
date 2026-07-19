@@ -13,11 +13,11 @@ export function Hero({ mailEnabled }: HeroProps) {
       <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-24 lg:px-8 lg:py-32">
         <span className="flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
           <Image
-            src="/brand/uel-logo-green.png"
-            alt="UEL"
-            width={18}
-            height={18}
-            className="h-4 w-4"
+            src="/brand/gaia-logo-dark.png"
+            alt="GAIA"
+            width={14}
+            height={24}
+            className="h-5 w-auto"
           />
           GAIA &middot; Universidade Estadual de Londrina
         </span>
