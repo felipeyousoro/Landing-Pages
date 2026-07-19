@@ -287,9 +287,7 @@ export function DiseaseDetection() {
           </h2>
           <p className="mx-auto max-w-2xl text-neutral-soft">
             Nossos modelos classificam imagens de folhas e mostram, por meio
-            de mapas de calor, quais regiões pesaram na decisão — a mesma
-            lógica usada para identificar precocemente pragas e doenças em
-            imagens capturadas por drones.
+            de mapas de calor, quais regiões pesaram na decisão.
           </p>
         </div>
 

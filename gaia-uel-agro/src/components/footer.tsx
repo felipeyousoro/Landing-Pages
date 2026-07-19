@@ -35,9 +35,9 @@ export function Footer() {
           <a href="#deteccao-de-doencas" className="transition-colors hover:text-accent">
             Detecção de Doenças
           </a>
-          <a href="#drones" className="transition-colors hover:text-accent">
+          {/* <a href="#drones" className="transition-colors hover:text-accent">
             Drones
-          </a>
+          </a> */}
           <a href="#outros-trabalhos" className="transition-colors hover:text-accent">
             Outros trabalhos
           </a>

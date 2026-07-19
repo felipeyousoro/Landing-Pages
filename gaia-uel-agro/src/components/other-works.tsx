@@ -25,7 +25,7 @@ export function OtherWorks() {
             Outros trabalhos
           </span>
           <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-neutral sm:text-4xl">
-            Além da detecção e dos drones, outras frentes de atuação.
+            Além da detecção, outras frentes de atuação.
           </h2>
           <p className="mx-auto max-w-2xl text-neutral-soft">
             Aplicamos tecnologia da informação e ciência de dados para gerar
