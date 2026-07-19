@@ -12,8 +12,9 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Dazco",
-  description: "Dazco - get in touch with our team.",
+  title: "Dazco LLC | Facilities Management",
+  description:
+    "Dazco LLC — a place of Trust. Facilities, properties, warehousing, and maintenance services in Al Ain, Abu Dhabi since 2001.",
   icons: {
     icon: "/brand/dazco-logo.png",
   },

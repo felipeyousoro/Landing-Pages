@@ -10,22 +10,35 @@ export function Footer() {
           <Image
             src="/brand/dazco-logo-white.png"
             alt="Dazco"
-            width={140}
-            height={87}
-            className="h-10 w-auto"
+            width={1225}
+            height={793}
+            className="h-auto w-[140px]"
           />
           <p className="max-w-xs text-sm text-white/70">
-            Tell us about your project and our team will get back to you shortly.
+            A place of Trust. Facilities, properties, and operational services
+            since 2001.
           </p>
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-white/70">
           <span className="font-semibold text-white">Contact</span>
-          <a href="mailto:contact@dazco.com" className="transition-colors hover:text-primary">
-            contact@dazco.com
+          <span>AL Shimmari Building, Office no. 111</span>
+          <span>Al Ain, Abu Dhabi 14488, UAE</span>
+          <a
+            href="https://www.dazco.ae"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-primary"
+          >
+            www.dazco.ae
           </a>
-          <a href="tel:+10000000000" className="transition-colors hover:text-primary">
-            +1 (000) 000-0000
+          <a
+            href="https://www.linkedin.com/company/dazcogroup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-primary"
+          >
+            LinkedIn
           </a>
         </div>
 

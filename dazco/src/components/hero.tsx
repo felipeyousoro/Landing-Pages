@@ -6,14 +6,14 @@ export function Hero() {
     >
       <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-24 lg:px-8 lg:py-32">
         <span className="rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
-          Dazco
+          A place of Trust
         </span>
         <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-neutral sm:text-5xl lg:text-6xl">
-          Energy, momentum and precision in every project.
+          Facilities management you can rely on.
         </h1>
         <p className="max-w-xl text-lg leading-8 text-neutral-soft">
-          We help businesses move forward with dynamic, dependable solutions.
-          Tell us what you need and let&apos;s build it together.
+          Locally based with international reach. Since 2001, Dazco has delivered
+          properties, facilities, warehousing, and maintenance services across the UAE.
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <a

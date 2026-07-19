@@ -1,18 +1,33 @@
 const SERVICES = [
   {
-    title: "Consulting",
+    title: "Properties & Facilities Management",
     description:
-      "We assess your goals and current setup to map out a clear, actionable plan.",
+      "End-to-end facilities operations that keep properties safe, efficient, and ready for daily use.",
   },
   {
-    title: "Implementation",
+    title: "Warehousing & Stores Operation",
     description:
-      "From planning to execution, we handle the details so you can focus on your business.",
+      "Reliable warehouse and store operations with disciplined processes for storage and logistics.",
   },
   {
-    title: "Support",
+    title: "Building General Maintenance",
     description:
-      "Ongoing support to keep everything running smoothly long after launch.",
+      "Preventive and corrective maintenance to protect assets and extend building lifespan.",
+  },
+  {
+    title: "IT Networking",
+    description:
+      "Network infrastructure and connectivity solutions tailored to offices and facilities.",
+  },
+  {
+    title: "CCTV & Smart Homes / Offices",
+    description:
+      "Security systems and smart building technology for safer, more connected spaces.",
+  },
+  {
+    title: "Supply Chain Management",
+    description:
+      "Coordinated supply chain support that keeps materials and operations moving smoothly.",
   },
 ];
 
@@ -25,7 +40,7 @@ export function Services() {
             What we do
           </span>
           <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-neutral sm:text-4xl">
-            Everything you need, in one place.
+            Facilities, maintenance, and operational expertise.
           </h2>
         </div>
 

@@ -9,12 +9,17 @@ export function Contact() {
             Contact
           </span>
           <h2 className="text-3xl font-semibold tracking-tight text-neutral sm:text-4xl">
-            Let&apos;s talk about your project.
+            Let&apos;s talk about your facilities needs.
           </h2>
           <p className="max-w-md text-neutral-soft">
-            Fill out the form and our team will get back to you as soon as
-            possible.
+            Tell us about your site, property, or operations requirements and our
+            team in Al Ain will get back to you shortly.
           </p>
+          <div className="mt-2 flex flex-col gap-1 text-sm text-neutral-soft">
+            <span className="font-semibold text-neutral">Dazco LLC</span>
+            <span>AL Shimmari Building, Office no. 111</span>
+            <span>Al Ain, Abu Dhabi 14488, UAE</span>
+          </div>
         </div>
 
         <div className="rounded-2xl border border-neutral/10 bg-white p-6 shadow-sm sm:p-8">

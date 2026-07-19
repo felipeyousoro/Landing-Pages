@@ -7,19 +7,21 @@ export function About() {
             About Dazco
           </span>
           <h2 className="text-3xl font-semibold tracking-tight text-neutral sm:text-4xl">
-            Built on consistency, driven by results.
+            Established 2001. Trusted by 120+ organizations.
           </h2>
         </div>
         <div className="flex flex-col gap-4 text-neutral-soft">
           <p>
-            Dazco was built around a simple idea: deliver work that is
-            reliable, professional and easy to work with. Every project we
-            take on is treated with the same care and attention to detail.
+            Dazco LLC is a facilities company based in Al Ain, Abu Dhabi — locally
+            rooted with international reach. We operate across properties and
+            facilities management, warehouses and stores operation, building
+            general maintenance, IT networking, CCTV, smart homes and offices,
+            and supply chain management.
           </p>
           <p>
-            Our team blends experience with a fresh, dynamic approach so we
-            can adapt quickly to what each client actually needs, rather than
-            offering one-size-fits-all solutions.
+            As an approved vendor with over 120+ government, semi-government, and
+            private entities, our work is driven by a strong, experienced team
+            that treats every site and client with the same standard of care.
           </p>
         </div>
       </div>
