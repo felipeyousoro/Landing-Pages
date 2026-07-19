@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -44,15 +45,21 @@ export function Footer() {
 
         <nav className="flex flex-col gap-2 text-sm text-white/70">
           <span className="font-semibold text-white">Navigate</span>
-          <a href="#about" className="transition-colors hover:text-primary">
+          <Link href="/#about" className="transition-colors hover:text-primary">
             About
-          </a>
-          <a href="#services" className="transition-colors hover:text-primary">
+          </Link>
+          <Link
+            href="/#services"
+            className="transition-colors hover:text-primary"
+          >
             Services
-          </a>
-          <a href="#contact" className="transition-colors hover:text-primary">
+          </Link>
+          <Link
+            href="/#contact"
+            className="transition-colors hover:text-primary"
+          >
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
 

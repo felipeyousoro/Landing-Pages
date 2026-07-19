@@ -17,13 +17,13 @@ export function Hero() {
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <a
-            href="#contact"
+            href="/#contact"
             className="rounded-full bg-primary px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-colors hover:bg-secondary"
           >
             Get in touch
           </a>
           <a
-            href="#services"
+            href="/#services"
             className="rounded-full border border-neutral/15 px-6 py-3 text-center text-sm font-semibold text-neutral transition-colors hover:border-primary hover:text-primary"
           >
             See our services

@@ -1,35 +1,5 @@
-const SERVICES = [
-  {
-    title: "Properties & Facilities Management",
-    description:
-      "End-to-end facilities operations that keep properties safe, efficient, and ready for daily use.",
-  },
-  {
-    title: "Warehousing & Stores Operation",
-    description:
-      "Reliable warehouse and store operations with disciplined processes for storage and logistics.",
-  },
-  {
-    title: "Building General Maintenance",
-    description:
-      "Preventive and corrective maintenance to protect assets and extend building lifespan.",
-  },
-  {
-    title: "IT Networking",
-    description:
-      "Network infrastructure and connectivity solutions tailored to offices and facilities.",
-  },
-  {
-    title: "CCTV & Smart Homes / Offices",
-    description:
-      "Security systems and smart building technology for safer, more connected spaces.",
-  },
-  {
-    title: "Supply Chain Management",
-    description:
-      "Coordinated supply chain support that keeps materials and operations moving smoothly.",
-  },
-];
+import Link from "next/link";
+import { SERVICES } from "@/lib/services";
 
 export function Services() {
   return (
@@ -46,14 +16,22 @@ export function Services() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
-            <div
-              key={service.title}
-              className="flex flex-col gap-3 rounded-2xl border border-neutral/10 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
+              className="group flex flex-col gap-3 rounded-2xl border border-neutral/10 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
             >
-              <span className="h-1.5 w-10 rounded-full bg-primary" />
-              <h3 className="text-lg font-semibold text-neutral">{service.title}</h3>
-              <p className="text-sm leading-6 text-neutral-soft">{service.description}</p>
-            </div>
+              <span className="h-1.5 w-10 rounded-full bg-primary transition-colors group-hover:bg-secondary" />
+              <h3 className="text-lg font-semibold text-neutral group-hover:text-primary">
+                {service.title}
+              </h3>
+              <p className="text-sm leading-6 text-neutral-soft">
+                {service.description}
+              </p>
+              <span className="mt-auto pt-2 text-sm font-semibold text-primary">
+                Learn more →
+              </span>
+            </Link>
           ))}
         </div>
       </div>
