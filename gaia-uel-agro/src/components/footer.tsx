@@ -38,6 +38,9 @@ export function Footer() {
           <a href="#drones" className="transition-colors hover:text-accent">
             Drones
           </a>
+          <a href="#outros-trabalhos" className="transition-colors hover:text-accent">
+            Outros trabalhos
+          </a>
         </nav>
       </div>
     </footer>

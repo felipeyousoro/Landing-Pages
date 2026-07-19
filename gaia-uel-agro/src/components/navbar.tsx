@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "#top", label: "Início" },
   { href: "#deteccao-de-doencas", label: "Detecção de Doenças" },
   { href: "#drones", label: "Drones" },
+  { href: "#outros-trabalhos", label: "Outros trabalhos" },
 ];
 
 export function Navbar() {

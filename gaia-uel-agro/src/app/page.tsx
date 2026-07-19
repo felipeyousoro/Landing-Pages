@@ -4,6 +4,7 @@ import { Drones } from "@/components/drones";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
+import { OtherWorks } from "@/components/other-works";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <About />
         <DiseaseDetection />
         <Drones />
+        <OtherWorks />
       </main>
       <Footer />
     </div>
