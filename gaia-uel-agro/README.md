@@ -93,14 +93,14 @@ tecnológico como cor de destaque (IA / drones).
 ### Sobre o logo da UEL
 
 Não existe um logotipo oficial único e público para um "Grupo GAIA" ligado à
-UEL voltado a agricultura/drones — a pesquisa encontrou apenas entidades
+UEL voltado a agricultura/drones: a pesquisa encontrou apenas entidades
 distintas com nomes parecidos (uma empresa privada "Gaia Agro Solutions"
 parceira da UEL em bioinsumos, o centro de pesquisa "CIA-Agro" da UEL/Paraná
 sobre IA no agronegócio, e uma "Fábrica de Software GAIA" do Departamento de
 Computação da UEL, sem relação com agro). Por isso, a navbar usa o
 **símbolo oficial da UEL** (baixado do site institucional, arquivo
 `ref/uel-logo-branco.png`, recolorido programaticamente para o verde oficial
-da marca — mesma forma, apenas outra cor prevista no manual) ao lado de um
+da marca, mesma forma, apenas outra cor prevista no manual) ao lado de um
 wordmark de texto "GAIA", em vez de um logotipo de terceiros não confirmado.
 Se a organização tiver um logotipo próprio, basta substituir os arquivos em
 `public/brand/` e o texto "GAIA" no `navbar.tsx`/`footer.tsx`.

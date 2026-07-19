@@ -5,8 +5,6 @@ type FooterProps = {
 };
 
 export function Footer({ mailEnabled }: FooterProps) {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="bg-secondary text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
@@ -56,12 +54,6 @@ export function Footer({ mailEnabled }: FooterProps) {
             </a>
           )}
         </nav>
-      </div>
-
-      <div className="border-t border-white/10 px-6 py-4 lg:px-8">
-        <p className="text-center text-xs text-white/50">
-          &copy; {year} GAIA &middot; Universidade Estadual de Londrina (UEL). Todos os direitos reservados.
-        </p>
       </div>
     </footer>
   );

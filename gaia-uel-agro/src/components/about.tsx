@@ -37,7 +37,7 @@ export function About() {
             ao desenvolvimento de soluções de agro 4.0. O trabalho é guiado
             por três frentes complementares: coleta de dados em campo com
             drones, modelos de aprendizado profundo para diagnóstico de
-            doenças, e explicabilidade — mostrando exatamente onde e por que
+            doenças, e explicabilidade, mostrando exatamente onde e por que
             um modelo identificou um problema na planta.
           </p>
           <p>
