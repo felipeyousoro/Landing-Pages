@@ -1,0 +1,17 @@
+node_modules
+.next
+.git
+.gitignore
+*.md
+.env
+.env.*
+!.env.example
+ref
+.vscode
+.idea
+coverage
+Dockerfile
+docker-compose.yml
+.dockerignore
+**/*.tsbuildinfo
+next-env.d.ts

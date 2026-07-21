@@ -45,3 +45,23 @@ Credencial sugerida: `ana.mendes@olimpia.sp.gov.br` / `olimpia2026`
 ## Branding
 
 Substitua o placeholder em `public/brand/prefeitura-olimpia.svg` pela logo oficial da Prefeitura quando disponível.
+
+## Build
+
+```bash
+pnpm build
+pnpm start
+```
+
+## Docker
+
+Sobe o protótipo (Next.js standalone) e um PostgreSQL 16 (sem publicar portas no host;
+os serviços se falam pela rede padrão do Compose via o hostname `db`):
+
+```bash
+cp .env.example .env
+docker compose up --build
+```
+
+A app ainda não usa o banco; o serviço `db` fica pronto para integrações futuras.
+`DATABASE_URL` do serviço `web` aponta para `db:5432`.
